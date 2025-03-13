@@ -29,7 +29,7 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
                     if (mismatchCount > 1) return false;
                 }
             }
-            return (mismatchCount == 1);
+            return (mismatchCount <= 1);
         }
         else {
             const string& longer = (len1 > len2) ? str1 : str2;
@@ -49,7 +49,7 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
             if (i < (int)longer.size()) {
                 mismatchCount++;
             }
-            return (mismatchCount == 1);
+            return (mismatchCount <= 1);
         }
     }
     return false;
