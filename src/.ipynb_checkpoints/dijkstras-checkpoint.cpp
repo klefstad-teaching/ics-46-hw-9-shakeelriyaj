@@ -34,7 +34,7 @@ vector<int> dijkstra_shortest_path(const Graph& G, int source, vector<int>& prev
 
         visited[u] = true;
 
-        for (size_t j = 0; i < G[u].size(); j++) {
+        for (size_t j = 0; j < G[u].size(); j++) {
             int v = G[u][j].dst;
             int w = G[u][j].weight;
             if (!visited[v] && distance[u] != INF && distance[u] + w < distance[v]) {
